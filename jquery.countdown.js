@@ -146,6 +146,7 @@
             if (cnum === 0) {
                 cdl.button.hide();
                 opt.completed && opt.completed();
+                cdl.membrane.remove();
             } else {
                 cdl.timer = setTimeout(cdInner, 1000);
             }
