@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+    <title>countdownのテスト</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="jquery.countdown.js"></script>
+<script type="text/javascript">
+function cdtest() {
+    $.countdown({
+        count: 5,
+        message: 'シャットダウンしてよろしいですか？',
+        completed: function() {
+            alert('BooBoo.');
+        },
+        canceled: function() {
+            alert('キャンセルされました');
+        }
+    });
+}
+</script>
+</head>
+<body>
+    カウントダウンしますか？
+    <button type="button" onclick="cdtest()">スタート</button>
+      <div style="width:100px;height:800px;border:3px solid gray;background: cyan;">
+        大きな要素
+    </div>
+</body>
+</html>
